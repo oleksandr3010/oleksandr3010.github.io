@@ -1,4 +1,4 @@
-# Minimal Mistakes remote theme starter
+<!-- # Minimal Mistakes remote theme starter
 
 Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
 
@@ -24,4 +24,13 @@ If you have a question about using Jekyll, start a discussion on the [Jekyll For
 
 - [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
 - [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings. -->
+
+# Oleksandr's Home for Digital Humanities
+
+Welcome to my page, which will house the work that I will do for the Intro to Digital Humanties class. 
+
+## Digital Literacy Narrative
+or DLN for short, will be a semester long project documenting my shifting, or not, perspective about the functions of digitial humanities, my reflections, and more. First changes documented below for step 1.
+
+![step1](assets/images/step1.png)
