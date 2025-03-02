@@ -7,8 +7,8 @@ main:
     url: /dln/
   - title: "Final Project"
     url: /final-project/
-  - title: "Assignments"
-    url: /assignments/
+  - title: "Assignment 1"
+    url: /assignment1/
   - title: "Tags"
     url: /tags/
   - title: "About"
