@@ -1,10 +1,13 @@
 ---
-title: "Assignment 1"
+title: "Assignment 1: Working with a Corpus - What can we really read from a distance?"
 excerpt_separator: ""
+author_profile: false
 categories:
-    - Blog
+    - Assignments
 tags:
-    - readability
+    - Assignment1
+    - corpus
+    - distant reading
 ---
 
 # Working With A Corpus

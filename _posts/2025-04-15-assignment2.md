@@ -1,8 +1,9 @@
 ---
 title: "Assignment 2: From Numbers to 3D Maps - What up for import to Zanzibar?"
 excerpt_separator: ""
+author_profile: false
 categories:
-    - Blog
+    - Assignments
 tags:
     - Zanzibar
     - Spacial Data
