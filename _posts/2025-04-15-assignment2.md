@@ -53,6 +53,8 @@ However, we encountered an issue when attempting to visualize this data in Keple
 
 ### You may access the final intereractive map [here](/assets/html/zanzibarmap.html)
 
+<iframe src="assets/html/zanzibarmap.html" frameborder="0" width="600" height="400"></iframe>
+
 ## Conclusion and Discussion
 
 Upon inspecting the final interactive map, a few interesting patterns emerged which were previously not visible via the tabular data. Since the thickness of each arc is relatively based on the total tonnage, it is simple to observe how much produce was imported from different areas at any given time during the first three months of 1918. Namely, the two biggest importers into Zanzibar were Mafia and other East African ports and H.H. Dominions. Mafia was a large importer of produce such as Copra, where as H.H. Dominions was responsible for a large part of Cloves import. Looking at the data on a weekly scale, another pattern emerges. Arcs to ports further away, such as Southern Ports and Italian Benadir ports appear a lot less frequently, likely due to the ports being geographically further away and the shipping costs associated with important from them. Furthermore, the imports from these distant ports were also less common items, such as Hides, Hippo-teeth, Rhino-horns and Tortoise shells. Combining these findings, we can see that the ports closer to Zanzibar provided important resources such as copra and cloves, whereas ports further away provided rarer materials. Ultimately, we believe that representing the data in this interactive visual format significant helps one to better understand the context and processes of the data, in a much easier to interpret medium than tabular data.
@@ -72,3 +74,5 @@ Lauren Klien (et. al.) write that â€œmodels make words, but people make meaningâ
 -   [History of Zanzibar](https://tziva.org/history-of-zanzibar/)
 
 -   [Measurements and Currencies [in Zanzibar]](https://www.degruyter.com/document/doi/10.1515/9781785331763-003/pdf?licenseType=free)
+
+_Written by: Tokla R and Oleksandr A_
