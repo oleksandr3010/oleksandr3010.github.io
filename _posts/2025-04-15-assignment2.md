@@ -69,3 +69,5 @@ Lauren Klien (et. al.) write that â€œmodels make words, but people make meaningâ
 -   [The Zanzibar Clove Industry](https://www.jstor.org/stable/4255387)
 
 -   [History of Zanzibar](https://tziva.org/history-of-zanzibar/)
+
+-   [Measurements and Currencies [in Zanzibar]](https://www.degruyter.com/document/doi/10.1515/9781785331763-003/pdf?licenseType=free)
