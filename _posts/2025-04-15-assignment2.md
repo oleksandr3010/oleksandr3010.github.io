@@ -53,7 +53,7 @@ However, we encountered an issue when attempting to visualize this data in Keple
 
 ### You may access the final intereractive map [here](/assets/html/zanzibarmap.html)
 
-<iframe src="assets/html/zanzibarmap.html" frameborder="0" width="600" height="400"></iframe>
+<iframe src="/assets/html/zanzibarmap.html" frameborder="0" width="600" height="400"></iframe>
 
 ## Conclusion and Discussion
 
