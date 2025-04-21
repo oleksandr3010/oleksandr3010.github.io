@@ -1,12 +1,13 @@
 ---
-title: "Assignment 2"
-excerpt_separator: "Spatial Data: Zanzibar Gazette"
+title: "Assignment 2: From Numbers to 3D Maps - What up for import to Zanzibar?"
+excerpt_separator: ""
 categories:
     - Blog
 tags:
-    - Post Formats
-    - readability
-    - standard
+    - Zanzibar
+    - Spacial Data
+    - Kepler GL
+    - Assignment2
 ---
 
 ## Introduction and Context
@@ -23,7 +24,11 @@ The LLM we primarily used was Google’s Gemini 2.0 Flash, which had a relativel
 ![Zanz Gaz Img](/assets/images/zanz_gaz.png)
 
 We uploaded the screenshots, one by one, into Gemini and asked it to “create a CSV file from the table in this image of items imported to Zanzibar.” It generated a CSV file, but the columns were incorrectly labeled, and the values were mismatched, misaligned, or sometimes completely incorrect. Our following prompt will give the tool a little push by clarifying the columns and rows. There was also the issue of the header rows. Within one column, say “H.H Dominion”, there are two columns for “Fras.” and “lbs.” values, so in the prompt, we clarify the two columns: “H.H Dominion Fras.” and “H.H Dominion lbs.” which will make it easier to graph the data later on as well. The output had improved, yet issues of misalignment and other problems persisted. No matter how hard we attempted to modify the prompt, we concluded that the AI model we were using was unable to properly align values, despite accurately extracting them. This was likely due to the unjustified proportions of the table, as the AI model likely relied on a simple script that attempted to extract the values under the assumption that they were formatted in a modern way.
-A few days later, Google released a new model, Gemini 2.5 Pro, which gave us new hope for using an LLM more efficiently to gather data. Unlike the previous “lighter models,” the Gemini 2.5 Pro consistently performed near-perfectly every time with the same prompting. However, rather than providing the entire table, we provided only the numerical data section, omitting the produce names and location/weight headers. With this modification, we also included the appropriate text to be placed in the leftmost column (produce names) into the prompt, and the locations were later simply copied into the processed data sheet. With this new model and redesigned approach, we were able to accurately gather our data at a significantly faster rate than before, requiring minimal manual alignment of the values.
+A few days later, Google released a new model, Gemini 2.5 Pro, which gave us new hope for using an LLM more efficiently to gather data. Unlike the previous “lighter models,” the Gemini 2.5 Pro consistently performed near-perfectly every time with the use of the following prompt:
+
+> The image provided contains a table of imports from a historical gazzette. You must convert the image into a table accurately, ensuring the values are propely aligned. Provide me with a google sheet table of the data and a csv file. The leftmost column contains the following items (row by row): [list of all produce item names]. Header row for this data can be formatted as such: [produce, fras1, lbs1, fras2, ..., total fras, total lbs]
+
+Rather than providing the entire table, we provided only the numerical data section, omitting the produce names and location/weight headers. With this modification, we also included the appropriate text to be placed in the leftmost column (produce names) into the prompt, and the locations were later simply copied into the processed data sheet. With this new model and redesigned approach, we were able to accurately gather our data at a significantly faster rate than before, requiring minimal manual alignment of the values.
 
 ## Mapping the Data
 
@@ -49,7 +54,9 @@ However, we encountered an issue when attempting to visualize this data in Keple
 
 ## Conclusion and Discussion
 
-Ultimately, through the use of various tools, we were able to explore the large opportunities but also challenges within digital humanities, and specifically in the process of data extraction, processing, and visualization from historical sources. While the time-consuming task of digitizing the primary source of the Zanzibar Gazette had been done for us, we had largely underestimated the complexity of actually working with the data. We had also experienced first hand how modern AI and LLM tools can be useful in helping us with similar processes, yet it is also important to contemplate the implications of using said tools. A very recent article titled [Provocations from the Humanities for Generative AI Research](https://arxiv.org/pdf/2502.19190) highlights important aspects that we all must consider when using generative AI within the humanities and for research purposes.
+Upon inspecting the final interactive map, a few interesting patterns emerged which were previously not visible via the tabular data. Since the thickness of each arc is relatively based on the total tonnage, it is simple to observe how much produce was imported from different areas at any given time during the first three months of 1918. Namely, the two biggest importers into Zanzibar were Mafia and other East African ports and H.H. Dominions. Mafia was a large importer of produce such as Copra, where as H.H. Dominions was responsible for a large part of Cloves import. Looking at the data on a weekly scale, another pattern emerges. Arcs to ports further away, such as Southern Ports and Italian Benadir ports appear a lot less frequently, likely due to the ports being geographically further away and the shipping costs associated with important from them. Furthermore, the imports from these distant ports were also less common items, such as Hides, Hippo-teeth, Rhino-horns and Tortoise shells. Combining these findings, we can see that the ports closer to Zanzibar provided important resources such as copra and cloves, whereas ports further away provided rarer materials. Ultimately, we believe that representing the data in this interactive visual format significant helps one to better understand the context and processes of the data, in a much easier to interpret medium than tabular data.
+
+Through this exploration, we were able to explore the vast opportunities but also challenges of using modern tools such as AI and mapping software within digital humanities, specifically in the process of data extraction, processing, and visualization from historical sources. While the time-consuming task of digitizing the primary source of the Zanzibar Gazette had been done for us, we had largely underestimated the complexity of actually working with the data. We had also experienced first hand how modern AI and LLM tools can be useful in helping us with similar processes, yet it is also important to contemplate the implications of using said tools. A very recent article titled [Provocations from the Humanities for Generative AI Research](https://arxiv.org/pdf/2502.19190) highlights important aspects that we all must consider when using generative AI within the humanities and for research purposes.
 
 Lauren Klien (et. al.) write that “models make words, but people make meaning” (p. 6), and the interpretation of AI-generated content cannot be separated from the social and cultural contexts it engages. This is particularly relevant when working with historical materials like the Gazette, where “bias reflects a deeper structural problem, one that will never be fixed unless the power differentials… are challenged at their source” (p. 8). Furthermore, the article mentions that “not all training data is equivalent” (p. 9), encouraging us to think critically about the sources we use, their provenance, and the cultural narratives they reflect or erase. These arguements show us that while generative AI tools offer support in handling large textual datasets and may greatly improve efficiency (as it had happened in our case), they must be used with an awareness of their limitations, cultural implications, and the ethical responsibility that accompanies their use and implementation within humanities research.
 
@@ -59,4 +66,6 @@ Lauren Klien (et. al.) write that “models make words, but people make meaning�
 
 -   [Final CSV](/assets/files/formatted.csv)
 
--   more sources about zanz information etc.
+-   [The Zanzibar Clove Industry](https://www.jstor.org/stable/4255387)
+
+-   [History of Zanzibar](https://tziva.org/history-of-zanzibar/)
