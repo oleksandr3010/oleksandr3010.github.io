@@ -1,15 +1,15 @@
 main:
-  # - title: "Posts"
-  #   url: /posts/
-  # - title: "Categories"
-  #   url: /categories/
-  - title: "DLN"
-    url: /dln/
-  - title: "Assignment 1"
-    url: /assignment1/
-  - title: "Final Project"
-    url: /final-project/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
+    - title: "Assignments"
+      url: /posts/
+    # - title: "Categories"
+    #   url: /categories/
+    - title: "DLN"
+      url: /dln/
+    # - title: "Assignment 1"
+    #   url: /assignment1/
+    - title: "Final Project"
+      url: /final-project/
+    - title: "Tags"
+      url: /tags/
+    - title: "About"
+      url: /about/
