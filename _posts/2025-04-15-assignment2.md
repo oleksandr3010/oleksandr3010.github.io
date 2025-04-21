@@ -20,7 +20,7 @@ We found the digitized version of the Zanzibar Gazette from 1918 to be relativel
 
 The LLM we primarily used was Google’s Gemini 2.0 Flash, which had a relatively high success rate in extracting and generating the tables. We screenshotted the tables from the PDF, as inputting the entire file is impossible due to its enormous size, and we can easily control which tables we want.
 
-<img href="/assets/images/zanz_gaz.png" style="zoom:50%"/>
+![Zanz Gaz Img](/assets/images/zanz_gaz.png)
 
 We uploaded the screenshots, one by one, into Gemini and asked it to “create a CSV file from the table in this image of items imported to Zanzibar.” It generated a CSV file, but the columns were incorrectly labeled, and the values were mismatched, misaligned, or sometimes completely incorrect. Our following prompt will give the tool a little push by clarifying the columns and rows. There was also the issue of the header rows. Within one column, say “H.H Dominion”, there are two columns for “Fras.” and “lbs.” values, so in the prompt, we clarify the two columns: “H.H Dominion Fras.” and “H.H Dominion lbs.” which will make it easier to graph the data later on as well. The output had improved, yet issues of misalignment and other problems persisted. No matter how hard we attempted to modify the prompt, we concluded that the AI model we were using was unable to properly align values, despite accurately extracting them. This was likely due to the unjustified proportions of the table, as the AI model likely relied on a simple script that attempted to extract the values under the assumption that they were formatted in a modern way.
 A few days later, Google released a new model, Gemini 2.5 Pro, which gave us new hope for using an LLM more efficiently to gather data. Unlike the previous “lighter models,” the Gemini 2.5 Pro consistently performed near-perfectly every time with the same prompting. However, rather than providing the entire table, we provided only the numerical data section, omitting the produce names and location/weight headers. With this modification, we also included the appropriate text to be placed in the leftmost column (produce names) into the prompt, and the locations were later simply copied into the processed data sheet. With this new model and redesigned approach, we were able to accurately gather our data at a significantly faster rate than before, requiring minimal manual alignment of the values.
@@ -31,7 +31,7 @@ To map the data, we used [kepler.gl](www.kepler.gl), an open-source, high-perfor
 
 Once we had determined the geospatial details, namely a set of latitude and longitude coordinates for each location, we realized that we must completely reformat our data for Kepler to process it accurately. When gathering the data, we ended up with tabular data, which was exactly as we found it in the Gazette.
 
-<img href="/assets/images/sheets.png" style="zoom:50%"/>
+![Sheets Img](/assets/images/sheets.png)
 
 Nonetheless, we decided to write a simple Python program that would process our data, and using the CSV module, allow us to extract and reformat our data in a “kepler.gl friendly” format. The first version of our script read the data row by row, and only included valid entries into the final formatted CSV.
 
