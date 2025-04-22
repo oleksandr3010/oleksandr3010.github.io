@@ -41,7 +41,9 @@ Once we had determined the geospatial details, namely a set of latitude and long
 
 Nonetheless, we decided to write a simple Python program that would process our data, and using the CSV module, allow us to extract and reformat our data in a “kepler.gl friendly” format. The first version of our script read the data row by row, and only included valid entries into the final formatted CSV.
 
-However, we encountered an issue when attempting to visualize this data in Kepler, as all the produce to Zanzibar arcs would originate and end at single point. Consequently, it was impossible to view individual imports by hovering the cursor over the arc. We used ChatGPT’s o3-mini-high model to add a mathematical function to our script, which would assign a personalized set of coordinates to each imported product within a kilometer of the port coordinates, ensuring that the arcs do not overlap. This significantly improved the map, allowing us to view each individual product as its own distinct arc upon zooming in to the origin or destination port. Furthermore, we decided that the rows that contained the total tonnage of each product were not useful for the visualization that we were implementing therefore we decided to omit them. The thickness of each arc was determined by the total weight, which was calculated in Frasila, a unit of weight used in Zanzibar, equivalent to approximately 35 lbs per Frasila. Below is an extract from the final input data and the interactive map.
+However, we encountered an issue when attempting to visualize this data in Kepler, as all the produce to Zanzibar arcs would originate and end at single point. Consequently, it was impossible to view individual imports by hovering the cursor over the arc. We used ChatGPT’s o3-mini-high model to add a mathematical function to our script, which would assign a personalized set of coordinates to each imported product within a kilometer of the port coordinates, ensuring that the arcs do not overlap.
+The python program may be seen [here](/assets/files/format.py).
+This significantly improved the map, allowing us to view each individual product as its own distinct arc upon zooming in to the origin or destination port. Furthermore, we decided that the rows that contained the total tonnage of each product were not useful for the visualization that we were implementing therefore we decided to omit them. The thickness of each arc was determined by the total weight, which was calculated in Frasila, a unit of weight used in Zanzibar, equivalent to approximately 35 lbs per Frasila. Below is an extract from the final input data and the interactive map.
 
 | date            | origin_port    | product            | total_weight         | numerical_weight | port_lat           | port_long         | prod_lat            | prod_long         | zanz_lat | zanz_long | zanz_prod_lat       | zanz_prod_long    |
 | --------------- | -------------- | ------------------ | -------------------- | ---------------- | ------------------ | ----------------- | ------------------- | ----------------- | -------- | --------- | ------------------- | ----------------- |
@@ -53,7 +55,7 @@ However, we encountered an issue when attempting to visualize this data in Keple
 
 ### You may access the final intereractive map [here](/assets/html/zanzibarmap.html)
 
-<iframe src="/assets/html/zanzibarmap.html" frameborder="0" width="600" height="400"></iframe>
+<iframe src="/assets/html/zanzibarmap.html" frameborder="0"></iframe>
 
 ## Conclusion and Discussion
 
